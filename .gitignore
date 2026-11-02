@@ -2,4 +2,4 @@ __pycache__/
 .venv/
 *.csv
 scans/*.xml
-!tests/fixtures/*.xml
+!tests/*.xml
