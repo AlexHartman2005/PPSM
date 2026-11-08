@@ -8,6 +8,33 @@ ATTR_PREFIX = "#"   # attributes become "#addr", "#state", ...
 TEXT_KEY = "#text"  # text content, only added if non-empty
 
 
+def parse_scan(file_path, ip, inputName):
+    root = ET.parse(file_path).getroot()
+    records = []
+
+    # this is purely looking through the XML tree, and combining it nicely for the current format of export.py 
+    for host in root.findall("host"):
+        ip = host.find("address[@addrtype='ipv4']")
+        name = host.find("hostnames/hostname")
+
+        for port in host.findall("ports/port"):
+            if port.find("state").get("state") != "open":
+                #not open, skip it.
+                continue
+            service = port.find("service")
+
+            # Get all the relevant data export needs. If it doesn't exists, we can just put a blank string.
+            records.append({
+                "ports": port.get("portid"),
+                "protocol": port.get("protocol"),
+                "service": service.get("name") if service is not None else "",
+                "source_ip": ip.get("addr") if ip is not None else "",
+                "source_name": inputName if inputName is not None else "",
+                "destination_ip": ip.get("addr") if ip is not None else "",
+                "destination_name": name.get("name") if name is not None else "",
+            })
+    return records
+
 def element_to_dict(el):
     """Recursively convert an Element into a dict."""
     node = {}
@@ -33,7 +60,6 @@ def element_to_dict(el):
             node[child.tag].append(child_dict)
 
     return node
-
 
 def parse_xml_file(file_path):
     root = ET.parse(file_path).getroot()
