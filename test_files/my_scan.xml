@@ -4,53 +4,57 @@
 <nmaprun scanner="nmap" args="nmap -sP -&#45;no-stylesheet -oX my_scan.xml 172.16.7.204/24" start="1794080029" startstr="Sat Nov  7 14:33:49 2026" version="7.993" xmloutputversion="1.05">
 <verbose level="0"/>
 <debugging level="0"/>
+<host>
+    <status state="up" reason="echo-reply" reason_ttl="64"/>
+    <address addr="172.16.7.1" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="2924" rttvar="5000" to="100000"/>
+</host>
+<host>
+    <status state="up" reason="echo-reply" reason_ttl="63"/>
+    <address addr="172.16.7.6" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="7028" rttvar="7028" to="100000"/>
+</host>
+<host>
+    <status state="up" reason="echo-reply" reason_ttl="64"/>
+    <address addr="172.16.7.65" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="5564" rttvar="5564" to="100000"/>
+</host>
+<host>
+    <status state="up" reason="echo-reply" reason_ttl="63"/>
+    <address addr="172.16.7.75" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="6567" rttvar="6567" to="100000"/>
+</host>
+<host><status state="up" reason="echo-reply" reason_ttl="63"/>
+    <address addr="172.16.7.94" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="28345" rttvar="28345" to="141725"/>
+</host>
 <host><status state="up" reason="echo-reply" reason_ttl="64"/>
-<address addr="172.16.7.1" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="2924" rttvar="5000" to="100000"/>
+    <address addr="172.16.7.129" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="5326" rttvar="5326" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="63"/>
-<address addr="172.16.7.6" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="7028" rttvar="7028" to="100000"/>
-</host>
-<host><status state="up" reason="echo-reply" reason_ttl="64"/>
-<address addr="172.16.7.65" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="5564" rttvar="5564" to="100000"/>
+    <address addr="172.16.7.134" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="8958" rttvar="8958" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="63"/>
-<address addr="172.16.7.75" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="6567" rttvar="6567" to="100000"/>
-</host>
-<host><status state="up" reason="echo-reply" reason_ttl="63"/>
-<address addr="172.16.7.94" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="28345" rttvar="28345" to="141725"/>
-</host>
-<host><status state="up" reason="echo-reply" reason_ttl="64"/>
-<address addr="172.16.7.129" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="5326" rttvar="5326" to="100000"/>
-</host>
-<host><status state="up" reason="echo-reply" reason_ttl="63"/>
-<address addr="172.16.7.134" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="8958" rttvar="8958" to="100000"/>
-</host>
-<host><status state="up" reason="echo-reply" reason_ttl="63"/>
-<address addr="172.16.7.135" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<times srtt="96704" rttvar="96704" to="483520"/>
+    <address addr="172.16.7.135" addrtype="ipv4"/>
+    <hostnames>
+    </hostnames>
+    <times srtt="96704" rttvar="96704" to="483520"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="127"/>
 <address addr="172.16.7.137" addrtype="ipv4"/>
