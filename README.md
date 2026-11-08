@@ -63,5 +63,8 @@ To be able to use the program you will need to install both nmap and python on y
       2. Check if it is installed properly by typing 'nmap --version' in terminal
 
 
+# How to Use
 
+1. Users will enter the IP address when prompted
+2. The program will show  all the services connected to that IP address and will ouput a csv table that the user will be able to look at
 
