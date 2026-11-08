@@ -1,43 +1,45 @@
 # mcParser
-# WIP
+import json
 import xml.etree.ElementTree as ET
 
-# Test command: sudo nmap -sP --no-stylesheet -oX my_scan.xml 172.16.7.204/24
-TEST_PATH = "/Users/kennethzheng_/Downloads/PPSM/test_files/my_scan.xml"
+TEST_PATH = "test_files/my_scan.xml"
+
+ATTR_PREFIX = "#"   # attributes become "#addr", "#state", ...
+TEXT_KEY = "#text"  # text content, only added if non-empty
+
+
+def element_to_dict(el):
+    """Recursively convert an Element into a dict."""
+    node = {}
+
+    # attributes
+    for k, v in el.attrib.items():
+        node[ATTR_PREFIX + k] = v
+
+    # text (ignore whitespace between tags)
+    text = (el.text or "").strip()
+    if text:
+        node[TEXT_KEY] = text
+
+    # children (recursive step)
+    for child in el:
+        child_dict = element_to_dict(child)
+        if child.tag not in node:
+            node[child.tag] = child_dict
+        else:
+            # repeated tag -> promote to list
+            if not isinstance(node[child.tag], list):
+                node[child.tag] = [node[child.tag]]
+            node[child.tag].append(child_dict)
+
+    return node
+
 
 def parse_xml_file(file_path):
-    # Option A: Parse from a local file
-    tree = ET.parse(file_path)
-    root = tree.getroot()
+    root = ET.parse(file_path).getroot()
+    return {root.tag: element_to_dict(root)}
 
-    # Option B: Parse directly from a string
-    # xml_string = """
-    # <catalog>
-    #     <product id="101">
-    #         <name>Wireless Keyboard</name>
-    #         <price currency="USD">29.99</price>
-    #     </product>
-    #     <product id="102">
-    #         <name>Hydration Backpack</name>
-    #         <price currency="USD">45.00</price>
-    #     </product>
-    # </catalog>
-    # """
-    # root = ET.fromstring(xml_string)
-
-    # Basic metadata
-    print(f"Root Tag: {root.tag}")  # Output: catalog
-    # print(f"Root Attributes: {root.attrib}")  # Output: {}
-    # print(len(root))  # Output: []
-    for host in root.findall('host'):
-        print(f"Host: {host.attrib}")
-        for address in host.findall('address'):
-            print(f"  Address: {address.attrib}")
-        for port in host.findall('ports/port'):
-            print(f"  Port: {port.attrib}")
-            for service in port.findall('service'):
-                print(f"    Service: {service.attrib}")
 
 if __name__ == "__main__":
-    parse_xml_file(TEST_PATH)
-
+    with open("test_files/test.json", "w") as f:
+        json.dump(parse_xml_file(TEST_PATH), f, indent=4)

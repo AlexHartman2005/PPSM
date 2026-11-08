@@ -1,0 +1,356 @@
+{
+    "nmaprun": {
+        "#scanner": "nmap",
+        "#args": "nmap -sP --no-stylesheet -oX my_scan.xml 172.16.7.204/24",
+        "#start": "1794080029",
+        "#startstr": "Sat Nov  7 14:33:49 2026",
+        "#version": "7.993",
+        "#xmloutputversion": "1.05",
+        "verbose": {
+            "#level": "0"
+        },
+        "debugging": {
+            "#level": "0"
+        },
+        "host": [
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "64"
+                },
+                "address": {
+                    "#addr": "172.16.7.1",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "2924",
+                    "#rttvar": "5000",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "63"
+                },
+                "address": {
+                    "#addr": "172.16.7.6",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "7028",
+                    "#rttvar": "7028",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "64"
+                },
+                "address": {
+                    "#addr": "172.16.7.65",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "5564",
+                    "#rttvar": "5564",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "63"
+                },
+                "address": {
+                    "#addr": "172.16.7.75",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "6567",
+                    "#rttvar": "6567",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "63"
+                },
+                "address": {
+                    "#addr": "172.16.7.94",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "28345",
+                    "#rttvar": "28345",
+                    "#to": "141725"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "64"
+                },
+                "address": {
+                    "#addr": "172.16.7.129",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "5326",
+                    "#rttvar": "5326",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "63"
+                },
+                "address": {
+                    "#addr": "172.16.7.134",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "8958",
+                    "#rttvar": "8958",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "63"
+                },
+                "address": {
+                    "#addr": "172.16.7.135",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "96704",
+                    "#rttvar": "96704",
+                    "#to": "483520"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "127"
+                },
+                "address": {
+                    "#addr": "172.16.7.137",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "17126",
+                    "#rttvar": "17126",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "echo-reply",
+                    "#reason_ttl": "31"
+                },
+                "address": {
+                    "#addr": "172.16.7.164",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {},
+                "times": {
+                    "#srtt": "456157",
+                    "#rttvar": "218424",
+                    "#to": "1329853"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.193",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "00:90:7F:1C:F7:B7",
+                        "#addrtype": "mac",
+                        "#vendor": "WatchGuard Technologies"
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "4849",
+                    "#rttvar": "5000",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.207",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "22:4A:1E:7F:D5:71",
+                        "#addrtype": "mac"
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "683313",
+                    "#rttvar": "632250",
+                    "#to": "3212313"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.216",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "CC:6E:A4:F7:81:16",
+                        "#addrtype": "mac",
+                        "#vendor": "Samsung Electronics"
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "57062",
+                    "#rttvar": "57062",
+                    "#to": "285310"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.220",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "5A:C2:D2:7F:CF:1D",
+                        "#addrtype": "mac"
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "404360",
+                    "#rttvar": "404360",
+                    "#to": "2021800"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.225",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "C0:F5:35:29:90:78",
+                        "#addrtype": "mac",
+                        "#vendor": "Ampak Technology"
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "9908",
+                    "#rttvar": "9908",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "arp-response",
+                    "#reason_ttl": "0"
+                },
+                "address": [
+                    {
+                        "#addr": "172.16.7.236",
+                        "#addrtype": "ipv4"
+                    },
+                    {
+                        "#addr": "FC:B0:DE:F7:80:74",
+                        "#addrtype": "mac",
+                        "#vendor": "Cloud Network Technology Singapore PTE."
+                    }
+                ],
+                "hostnames": {},
+                "times": {
+                    "#srtt": "5752",
+                    "#rttvar": "5752",
+                    "#to": "100000"
+                }
+            },
+            {
+                "status": {
+                    "#state": "up",
+                    "#reason": "localhost-response",
+                    "#reason_ttl": "0"
+                },
+                "address": {
+                    "#addr": "172.16.7.204",
+                    "#addrtype": "ipv4"
+                },
+                "hostnames": {}
+            }
+        ],
+        "runstats": {
+            "finished": {
+                "#time": "1794080048",
+                "#timestr": "Sat Nov  7 14:34:08 2026",
+                "#summary": "Nmap done at Sat Nov  7 14:34:08 2026; 256 IP addresses (17 hosts up) scanned in 19.57 seconds",
+                "#elapsed": "19.57",
+                "#exit": "success"
+            },
+            "hosts": {
+                "#up": "17",
+                "#down": "239",
+                "#total": "256"
+            }
+        }
+    }
+}
