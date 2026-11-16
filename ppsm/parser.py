@@ -1,5 +1,6 @@
 # mcParser
 import json
+import socket
 import xml.etree.ElementTree as ET
 
 TEST_PATH = "test_files/my_scan.xml"
@@ -28,8 +29,8 @@ def parse_scan(file_path, ip, inputName):
                 "ports": port.get("portid"),
                 "protocol": port.get("protocol"),
                 "service": service.get("name") if service is not None else "",
-                "source_ip": ip.get("addr") if ip is not None else "",
-                "source_name": inputName if inputName is not None else "",
+                "source_ip": socket.gethostbyname(socket.gethostname()),
+                "source_name": inputName if inputName is not None else socket.gethostname(),
                 "destination_ip": ip.get("addr") if ip is not None else "",
                 "destination_name": name.get("name") if name is not None else "",
             })
